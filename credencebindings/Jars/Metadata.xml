@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <!-- Transformations, to avoid build errors, related to the fact that many interfaces, endup with duplicated args classes generated for the methods-->
+    <!-- Further adjustments can be made to rename parameters, mthods, namespace and so on-->
+    <!-- Args for WSQ Listener -->
+    <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnFingerprintGrabbedWSQListener']/method[@name='onFingerprintGrabbed']" name="argsType">WsqFingerprintsGrabbedArgs</attr>
+    <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnFingerprintGrabbedWSQListener']/method[@name='onCloseFingerprintReader']" name="argsType">WsqFingerprintsCloseArgs</attr>
+    <!-- Args for Multifingerprint Listener -->
+    <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnMultiFingerprintGrabbedListener']/method[@name='onFingerprintGrabbed']" name="argsType">MultiFingerprintsGrabbedArgs</attr>
+    <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnMultiFingerprintGrabbedListener']/method[@name='onCloseFingerprintReader']" name="argsType">MultiFingerprintsClosedArgs</attr>
+    <!-- Args for Fingerptint Listener -->
+    <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnFingerprintGrabbedListener']/method[@name='onFingerprintGrabbed']" name="argsType">FingerprintGrabbedArgs</attr>
+    <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnFingerprintGrabbedListener']/method[@name='onCloseFingerprintReader']" name="argsType">FingerprintClosedArgs</attr>
+    <!-- Args forFull Fingerprint Listener -->
+    <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnFingerprintGrabbedFullListener']/method[@name='onFingerprintGrabbed']" name="argsType">FullFingerprintsGrabbedArgs</attr>
+    <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnFingerprintGrabbedFullListener']/method[@name='onCloseFingerprintReader']" name="argsType">FullFingerprintsCloseArgs</attr>
+    <!-- Args for raw listener -->
+    <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnFingerprintGrabbedRawListener']/method[@name='onFingerprintGrabbed']" name="argsType">RawFingerprintsGrabbedArgs</attr>
+    <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnFingerprintGrabbedRawListener']/method[@name='onCloseFingerprintReader']" name="argsType">RawFingerprintsCloseArgs</attr>
+</metadata>
