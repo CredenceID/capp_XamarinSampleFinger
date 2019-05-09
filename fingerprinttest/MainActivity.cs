@@ -1,4 +1,4 @@
-﻿using Android.App;
+using Android.App;
 using Android.Widget;
 using Android.OS;
 using Android.Graphics;
@@ -28,10 +28,10 @@ namespace FingerprintTest {
 
         /* Object to interface with CredenceID biometric APIs. */
         private static BiometricsManager mBioManager;
-        /* Stores which specific family of CrdenceID device's application is running on. */
-        private DeviceFamily mDeviceFamily = DeviceFamily.CredenceOne;
-        /* Stores which specific CredenceID device this application is running on. */
-        private DeviceType mDeviceType = DeviceType.CredenceOneV1F;
+		/* Stores which specific family of CrdenceID device's application is running on. */
+		private static DeviceFamily mDeviceFamily = DeviceFamily.InvalidDevice;
+		/* Stores which specific CredenceID device this application is running on. */
+		private static DeviceType mDeviceType = DeviceType.InvalidDevice;
         
         /* If true, then "mOpenClose" button text is "Open" meaning we need to open fingerprint.
 	     * If false, then "mOpenClose" button text is "Close" meaning we need to close fingerprint.
@@ -225,17 +225,51 @@ namespace FingerprintTest {
             mBioManager.CompareFmd(FMDOne, FMDTwo, BiometricsFmdFormat.Iso1979422005, new OnCompareFMD());
         }
 
+		private static void
+		setDeviceType(String productName) {
+
+			if (productName == "Credence One V1")
+				mDeviceType = DeviceType.CredenceOneV1F;
+			else if (productName == "Credence One V2")
+				mDeviceType = DeviceType.CredenceOneV2FC;
+			else if (productName == "Credence One V3")
+				mDeviceType = DeviceType.CredenceOneV3FCM;
+			else if (productName == "Credence Two V1")
+				mDeviceType = DeviceType.CredenceTwoV1F;
+			else if (productName == "Credence Two V2")
+				mDeviceType = DeviceType.CredenceTwoV2FC;
+			else if (productName == "Credence TAB V1")
+				mDeviceType = DeviceType.CredenceTabV1F;
+			else if (productName == "Credence TAB V2")
+				mDeviceType = DeviceType.CredenceTabV2FC;
+			else if (productName == "Credence TAB V3")
+				mDeviceType = DeviceType.CredenceTabV3FM;
+			else if (productName == "Credence TAB V4")
+				mDeviceType = DeviceType.CredenceTabV4FCM;
+			else if (productName == "Trident-1")
+				mDeviceType = DeviceType.Trident1;
+			else if (productName == "Trident-2")
+				mDeviceType = DeviceType.Trident2;
+			else if (productName == "Twizzler")
+				mDeviceType = DeviceType.Twizzler;
+		}
+
         /* *********************************************************************************
          * Callback invoked when biometrics initializes.
          * *********************************************************************************
          */
         public class BiometricsOnInitializedListener : Java.Lang.Object, IBiometricsOnInitializedListener {
-            public void OnInitialized(BiometricsResultCode p0, string p1, string p2) {
 
-                int strID = Resource.String.bio_init_good;
-                if (BiometricsResultCode.Ok == p0)
-                    mOpenCloseButton.Enabled = true;
-                else if (BiometricsResultCode.Fail == p0)
+			public void OnInitialized(BiometricsResultCode p0,
+									  string p1,
+									  string p2) {
+
+				int strID = Resource.String.bio_init_good;
+				if (BiometricsResultCode.Ok == p0) {
+					mOpenCloseButton.Enabled = true;
+					setDeviceType(mBioManager.ProductName);
+
+				} else if (BiometricsResultCode.Fail == p0)
                     strID = Resource.String.bio_init_failed;
 
                 Toast.MakeText(mContext, strID, ToastLength.Long).Show();
