@@ -17,4 +17,6 @@
     <!-- Args for raw listener -->
     <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnFingerprintGrabbedRawListener']/method[@name='onFingerprintGrabbed']" name="argsType">RawFingerprintsGrabbedArgs</attr>
     <attr path="/api/package[@name='com.credenceid.biometrics']/interface[@name='Biometrics.OnFingerprintGrabbedRawListener']/method[@name='onCloseFingerprintReader']" name="argsType">RawFingerprintsCloseArgs</attr>
+
+    <attr path="/api/package[@name='com.credenceid']/class[@name='Constants']" name="name">ConstantsClass</attr>
 </metadata>

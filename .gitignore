@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.suo
+/.vs
+/credencebindings/bin/Debug
+/credencebindings/obj/debug/generated/src
+/credencebindings/obj/debug/generated
+/credencebindings/obj/debug/lp
+/credencebindings/obj/Release/generated
+/credencebindings/obj/Release
+/fingerprinttest/bin/Debug
+/fingerprinttest/obj

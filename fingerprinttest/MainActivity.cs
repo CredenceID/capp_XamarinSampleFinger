@@ -6,6 +6,7 @@ using Android.Graphics;
 using Com.Credenceid.Biometrics;
 using System;
 using Android.Content;
+using SampleFingerprint;
 
 namespace FingerprintTest {
     [Activity(Label = "FingerprintTest", MainLauncher = true, Icon = "@mipmap/icon", Name = "com.biometricstest.mobile.FingerprintTest.MainActivity")]
@@ -198,7 +199,7 @@ namespace FingerprintTest {
         private static void
         createFMDTemplate(Bitmap bitmap) {
 
-            mBioManager.ConvertToFmd(bitmap, BiometricsFmdFormat.Iso1979422005, new ConvertToFMDListener((CovertToFMDResult result) => {
+            mBioManager.ConvertToFMD(bitmap, BiometricsFMDFormat.Iso1979422005, new ConvertToFMDListener((CovertToFMDResult result) => {
 
                 if (BiometricsResultCode.Ok == result.ResultCode) {
                     mInfoTextView.Text = ("Created FMD template.");
@@ -222,7 +223,7 @@ namespace FingerprintTest {
 		     * that if any FMD is invalid it will return the proper score of 0, etc.
 		     */
              
-            mBioManager.CompareFmd(FMDOne, FMDTwo, BiometricsFmdFormat.Iso1979422005, new OnCompareFMD());
+            mBioManager.CompareFMD(FMDOne, FMDTwo, BiometricsFMDFormat.Iso1979422005, new OnCompareFMDListener());
         }
 
 		private static void
@@ -247,9 +248,9 @@ namespace FingerprintTest {
 			else if (productName == "Credence TAB V4")
 				mDeviceType = DeviceType.CredenceTabV4FCM;
 			else if (productName == "Trident-1")
-				mDeviceType = DeviceType.Trident1;
+				mDeviceType = DeviceType.TridentOne;
 			else if (productName == "Trident-2")
-				mDeviceType = DeviceType.Trident2;
+				mDeviceType = DeviceType.TridentTwo;
 			else if (productName == "Twizzler")
 				mDeviceType = DeviceType.Twizzler;
 		}
@@ -441,7 +442,8 @@ namespace FingerprintTest {
          * Callback invoked wehn C-Service returns with FMD creation result.
          * *********************************************************************************
          */
-        public class ConvertToFMDListener : Java.Lang.Object, IBiometricsOnConvertToFmdListener {
+        public class ConvertToFMDListener : Java.Lang.Object, IBiometricsOnConvertToFMDListener
+        {
             public delegate void OnFinishedWithResult(CovertToFMDResult result);
 
             public ConvertToFMDListener(OnFinishedWithResult onFinishedWithResult) {
@@ -450,7 +452,7 @@ namespace FingerprintTest {
 
             OnFinishedWithResult _finishedWithResult;
 
-            public void OnConvertToFmd(BiometricsResultCode p0, byte[] p1) {
+            public void OnConvertToFMD(BiometricsResultCode p0, byte[] p1) {
                 _finishedWithResult?.Invoke(new CovertToFMDResult { ResultCode = p0, FMD = p1 });
             }
         }
@@ -459,8 +461,8 @@ namespace FingerprintTest {
          * Callback invoked wehn C-Service returns with compareFMD result.
          * *********************************************************************************
          */
-        public class OnCompareFMD : Java.Lang.Object, IBiometricsOnCompareFmdListener {
-            public void OnCompareFmd(BiometricsResultCode resultCode,
+        public class OnCompareFMDListener : Java.Lang.Object, IBiometricsOnCompareFMDListener {
+            public void OnCompareFMD(BiometricsResultCode resultCode,
                                     float dissimilarity) {
 
                 /* Re-enable all components since operation is now complete. */
