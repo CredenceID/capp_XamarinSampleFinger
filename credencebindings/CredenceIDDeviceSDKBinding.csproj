@@ -54,5 +54,8 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Jars\Metadata.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\CredenceIDDeviceSDK.jar" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
