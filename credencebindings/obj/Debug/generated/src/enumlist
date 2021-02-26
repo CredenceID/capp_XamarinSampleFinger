@@ -1,0 +1,16 @@
+com.credenceid.biometrics.Biometrics$CloseReasonCode:Com.Credenceid.Biometrics:Biometrics.CloseReasonCode
+com.credenceid.biometrics.Biometrics$EyeSelection:Com.Credenceid.Biometrics:Biometrics.EyeSelection
+com.credenceid.biometrics.Biometrics$FingerprintScannerType:Com.Credenceid.Biometrics:Biometrics.FingerprintScannerType
+com.credenceid.biometrics.Biometrics$FMDFormat:Com.Credenceid.Biometrics:Biometrics.FMDFormat
+com.credenceid.biometrics.Biometrics$ResultCode:Com.Credenceid.Biometrics:Biometrics.ResultCode
+com.credenceid.biometrics.Biometrics$ScanType:Com.Credenceid.Biometrics:Biometrics.ScanType
+com.credenceid.biometrics.DeviceFamily:Com.Credenceid.Biometrics:DeviceFamily
+com.credenceid.biometrics.DeviceType:Com.Credenceid.Biometrics:DeviceType
+com.credenceid.database.BiometricDatabase$Status:Com.Credenceid.Database:BiometricDatabase.Status
+com.credenceid.database.FingerprintRecord$Position:Com.Credenceid.Database:FingerprintRecord.Position
+com.credenceid.database.ImageIndex:Com.Credenceid.Database:ImageIndex
+com.credenceid.database.IrisRecord$Position:Com.Credenceid.Database:IrisRecord.Position
+com.credenceid.face.FaceEngine$Emotion:Com.Credenceid.Face:FaceEngine.Emotion
+com.credenceid.face.FaceEngine$Gender:Com.Credenceid.Face:FaceEngine.Gender
+com.credenceid.face.FaceEngine$HeadPoseDirection:Com.Credenceid.Face:FaceEngine.HeadPoseDirection
+com.credenceid.icao.ICAOReadIntermediateCode:Com.Credenceid.Icao:ICAOReadIntermediateCode

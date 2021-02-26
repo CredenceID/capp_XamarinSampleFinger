@@ -1,0 +1,7 @@
+<resources><string name="hello">Compare</string><string name="app_name">FingerprintTest</string><string name="bio_init_good">Biometrics initialized.</string><string name="bio_init_failed">Biometrics failed to initialize.</string><string name="open">Open</string><string name="close">Close</string><string name="capture">Capture</string><string name="match">Match</string><string name="fingerprint_selection_label">
+    Click on a box to select that fingerprint for capture.
+  </string><string name="fingerprint_one_imageview_label">
+    Fingerprint One
+  </string><string name="fingerprint_two_imageview_label">
+    Fingerprint Two
+  </string></resources>

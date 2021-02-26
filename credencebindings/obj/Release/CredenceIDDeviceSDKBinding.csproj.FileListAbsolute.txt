@@ -1,0 +1,8 @@
+D:\CredenceXam\CredenceBindings\bin\Release\CredenceBindings.dll
+D:\CredenceXam\CredenceBindings\bin\Release\CredenceBindings.pdb
+D:\CredenceXam\CredenceBindings\obj\Release\MonoAndroid,Version=v7.1.AssemblyAttributes.cs
+D:\CredenceXam\CredenceBindings\obj\Release\CredenceIDDeviceSDKBinding.csprojAssemblyReference.cache
+D:\CredenceXam\CredenceBindings\obj\Release\stamp\_BuildLibraryImportsCache.stamp
+D:\CredenceXam\CredenceBindings\obj\Release\CredenceIDDeviceSDKBinding.csproj.CoreCompileInputs.cache
+D:\CredenceXam\CredenceBindings\obj\Release\CredenceBindings.dll
+D:\CredenceXam\CredenceBindings\obj\Release\CredenceBindings.pdb

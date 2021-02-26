@@ -1,12 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.biometricstest.mobile.FingerprintTest" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="23" />
-	<application android:allowBackup="true" android:label="@string/app_name">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.biometricstest.mobile.FingerprintTest" android:installLocation="auto"
+          xmlns:tools="http://schemas.android.com/tools">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="com.credenceid.permission.SERVICE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+	<application android:allowBackup="true" android:label="@string/app_name"
+               android:supportsRtl="true"
+    tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+    android:theme="@android:style/Theme.NoTitleBar">
+    
 		<activity android:name="com.biometricstest.mobile.FingerprintTest.MainActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 				<action android:name="com.credenceid.algorithms.SERVICE" />
+			</intent-filter>
+		</activity>
+    <activity android:name=".LaunchActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".CameraActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".FaceActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.DEFAULT" />
 			</intent-filter>
 		</activity>
 		<service android:name="com.credenceid.algorithms" android:exported="true">

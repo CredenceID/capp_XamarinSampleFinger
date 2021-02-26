@@ -22,6 +22,7 @@ namespace FingerprintTest{
         private static Button mMatchButton;
         private static TextView mStatusTextView;
         private static TextView mInfoTextView;
+        private static Button mFaceCaptureButton;
 
         /* Used for loading resources, binding views, etc. */
         private static Context mContext;
@@ -146,7 +147,12 @@ namespace FingerprintTest{
                 setAllComponentEnable(false);
                 matchFMDTemplates(mFingerOneFMDTemplate, mFingerTwoFMDTemplate);
             };
-        }
+
+            mFaceCaptureButton.Click += (object sender, System.EventArgs e) =>
+            {
+                
+            };
+            }
 
         /* *********************************************************************************
          * Methods that edit UI components.

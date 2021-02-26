@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.ApduCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.BiometricsActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.BiometricsManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.CardCommandResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.CCFToFMDSyncResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.CompareFMDSyncResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.ConvertToFMDSyncResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.DeviceFamily.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.DeviceType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.FingerprintSyncResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.FingerQuality.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.FMDToCCFSyncResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.IBiometrics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Biometrics.IrisQuality.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Constants.ServiceConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.CredenceConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Database.BiometricData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Database.FaceRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Database.FingerprintRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Database.IBiometricDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Database.ImageIndex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Database.IrisRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Database.MatchItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Face.AnalyzeFaceSyncResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Face.CompareFaceSyncResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Face.CreateFaceTemplateSyncResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Face.DetectFaceSyncResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Face.FaceView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Face.IFaceEngine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Icao.FingerInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Icao.GhanaIdCardFpTemplateInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Icao.GIdData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Icao.ICAODocumentData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Icao.ICAOReadIntermediateCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Credenceid.Icao.ICAOUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Util.BitmapUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Util.FileUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Util.HexUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Util.Logger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>
