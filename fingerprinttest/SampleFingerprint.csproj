@@ -103,9 +103,9 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CredenceBindings\CredenceIDDeviceSDKBinding.csproj">
-      <Project>{FF8622F6-3A67-4D9D-B5FF-9884FCDD13F1}</Project>
-      <Name>CredenceIDDeviceSDKBinding</Name>
+    <ProjectReference Include="..\CredenceIDDeviceSDKBindings\CredenceIDDeviceSDKBindings.csproj">
+      <Project>{e2bcce2a-0541-49b5-8791-bfd3619220e2}</Project>
+      <Name>CredenceIDDeviceSDKBindings</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

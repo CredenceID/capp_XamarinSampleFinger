@@ -61,6 +61,8 @@ namespace FingerprintTest{
             /* Initialize object, meaning tell CredenceService to bind to this application. */
             mBioManager.InitializeBiometrics(new BiometricsOnInitializedListener());
 
+           
+
             this.initializeLayoutComponents();
             this.configureLayoutComponents();
         }
@@ -146,6 +148,7 @@ namespace FingerprintTest{
                 setAllComponentEnable(false);
                 matchFMDTemplates(mFingerOneFMDTemplate, mFingerTwoFMDTemplate);
             };
+
         }
 
         /* *********************************************************************************
@@ -272,6 +275,9 @@ namespace FingerprintTest{
 				} else if (BiometricsResultCode.Fail == p0)
                     strID = Resource.String.bio_init_failed;
 
+                mInfoTextView.Text = "C-SDK Jar version: " + mBioManager.SDKJarVersion;
+                mStatusTextView.Text = "C-SDK Service version: " + mBioManager.ServiceVersion;
+
                 Toast.MakeText(mContext, strID, ToastLength.Long).Show();
             }
         }
@@ -355,6 +361,44 @@ namespace FingerprintTest{
                 
                 if (BiometricsResultCode.Ok == resultCode) {
                     mStatusTextView.Text = ("WSQ File: " + WSQFilePath);
+                    mInfoTextView.Text = ("Quality: " + NFIQScore);
+
+                    /* Create template from fingerprint image. */
+                    createFMDTemplate(bitmap);
+
+                    setAllComponentEnable(true);
+
+                } else if (BiometricsResultCode.Intermediate == resultCode) {
+                    /* This case may occur if "cancelCapture()" or "closeFingerprint()" are called while
+                     * in middle of capture OR if capture failed.
+                     */
+                    if (null != hint && hint.Equals("Capture Stopped"))
+                        setAllComponentEnable(true);
+
+                } else if (BiometricsResultCode.Fail == resultCode) {
+                    mStatusTextView.Text = "Failed to capture fingerprint.";
+                    setAllComponentEnable(true);
+                }
+            }
+
+
+            public void OnFingerprintGrabbed(BiometricsResultCode resultCode,
+                                             Bitmap bitmap,
+                                             byte[] bytes,
+                                             string filePath,
+                                             byte[] WSQbytes,
+                                             string WSQFilePath,
+                                             string hint,
+                                             int NFIQScore) {
+                /* If hint is valid, display it. */
+                if (null != hint && hint.Length != 0)
+                    mStatusTextView.Text = hint;
+
+                if (null != bitmap)
+                    mFingerprintOneImageView.SetImageBitmap(bitmap);
+
+                if (BiometricsResultCode.Ok == resultCode) {
+
                     mInfoTextView.Text = ("Quality: " + NFIQScore);
 
                     /* Create template from fingerprint image. */
@@ -463,16 +507,14 @@ namespace FingerprintTest{
         public class OnCompareFmd : Java.Lang.Object, IBiometricsOnCompareFMDListener
         {
             public void OnCompareFMD(BiometricsResultCode resultCode,
-                                    float dissimilarity) {
+                                    float matchScore) {
 
                 /* Re-enable all components since operation is now complete. */
                 setAllComponentEnable(true);
 
                 if (BiometricsResultCode.Ok == resultCode) {
-                    String matchDecision = "No Match";
-                    /* This is how to properly determine a match or not. */
-                    if (dissimilarity < (int.MaxValue / 1000000))
-                        matchDecision = "Match";
+
+                        String matchDecision = "Match Score = " + matchScore;
 
                     mStatusTextView.Text = ("Matching complete.");
                     mInfoTextView.Text = ("Match outcome: " + matchDecision);
