@@ -6,4 +6,138 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.FingerprintReaderStatusListener']
+		  /method[@name='onCloseFingerprintReader']
+		  /parameter[@name='p0']"
+        name="name">res0</attr>
+	
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.FingerprintReaderStatusListener']
+		  /method[@name='onCloseFingerprintReader']
+		  /parameter[@name='p1']"
+	name="name">reasonCode1</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedFullListener']
+		  /method[@name='onCloseFingerprintReader']"
+	 name="argsType">OnFingerprintGrabbedFullListenerCloseFingerprintReaderEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedFullNewListener']
+		  /method[@name='onCloseFingerprintReader']"
+	name="argsType">OnFingerprintGrabbedFullNewListenerCloseFingerprintReaderEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedListener']
+		  /method[@name='onCloseFingerprintReader']"
+	name="argsType">OnFingerprintGrabbedListenerCloseFingerprintReaderEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedNewListener']
+		  /method[@name='onCloseFingerprintReader']"
+name="argsType">OnFingerprintGrabbedNewListenerCloseFingerprintReaderEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedRawListener']
+		  /method[@name='onCloseFingerprintReader']"
+	name="argsType">OnFingerprintGrabbedRawListenerCloseFingerprintReaderEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedRawNewListener']
+		  /method[@name='onCloseFingerprintReader']"
+	name="argsType">OnFingerprintGrabbedRawNewListenerCloseFingerprintReaderEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedWSQListener']
+		  /method[@name='onCloseFingerprintReader']"
+	name="argsType">OnFingerprintGrabbedWSQListenerCloseFingerprintReaderEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedWSQNewListener']
+		  /method[@name='onCloseFingerprintReader']"
+	name="argsType">OnFingerprintGrabbedWSQNewListenerCloseFingerprintReaderEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnMultiFingerprintGrabbedListener']
+		  /method[@name='onCloseFingerprintReader']"
+	name="argsType">OnMultiFingerprintGrabbedListenerCloseFingerprintReaderEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnMultiFingerprintGrabbedNewListener']
+		  /method[@name='onCloseFingerprintReader']"
+	name="argsType">OnMultiFingerprintGrabbedNewListenerCloseFingerprintReaderEventArgs</attr>
+
+
+
+
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedFullListener']
+		  /method[@name='onFingerprintGrabbed']"
+	 name="argsType">OnFingerprintGrabbedFullListenerFingerprintGrabbedEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedFullNewListener']
+		  /method[@name='onFingerprintGrabbed']"
+	name="argsType">OnFingerprintGrabbedFullNewListenerFingerprintGrabbedEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedListener']
+		  /method[@name='onFingerprintGrabbed']"
+	name="argsType">OnFingerprintGrabbedListenerFingerprintGrabbedEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedRawListener']
+		  /method[@name='onFingerprintGrabbed']"
+	name="argsType">OnFingerprintGrabbedRawListenerFingerprintGrabbedEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedRawNewListener']
+		  /method[@name='onFingerprintGrabbed']"
+	name="argsType">OnFingerprintGrabbedRawNewListenerFingerprintGrabbedEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedWSQListener']
+		  /method[@name='onFingerprintGrabbed']"
+	name="argsType">OnFingerprintGrabbedWSQListenerFingerprintGrabbedEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnFingerprintGrabbedWSQNewListener']
+		  /method[@name='onFingerprintGrabbed']"
+	name="argsType">OnFingerprintGrabbedWSQNewListenerFingerprintGrabbedEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnMultiFingerprintGrabbedListener']
+		  /method[@name='onFingerprintGrabbed']"
+	name="argsType">OnMultiFingerprintGrabbedListenerFingerprintGrabbedEventArgs</attr>
+
+	<attr path="/api
+		  /package[@name='com.credenceid.biometrics']
+		  /interface[@name='Biometrics.OnMultiFingerprintGrabbedNewListener']
+		  /method[@name='onFingerprintGrabbed']"
+	name="argsType">OnMultiFingerprintGrabbedNewListenerFingerprintGrabbedEventArgs</attr>
+
 </metadata>
